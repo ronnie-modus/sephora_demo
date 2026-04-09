@@ -1,4 +1,4 @@
-connection: "bigquery_sephora"
+connection: "sephora_demo"
 
 include: "/views/*.view.lkml"
 include: "/dashboards/*.dashboard.lookml"
@@ -8,8 +8,7 @@ datagroup: daily_refresh {
   max_cache_age: "24 hours"
 }
 
-# ── 1. Product discovery & comparison ───────────────────────────
-explore: product_discovery {
+explore: vw_product_full {
   label: "Products & Attributes"
   description: "Product catalog enriched with attributes, ratings, performance, and co-purchase data."
   persist_with: daily_refresh
@@ -36,64 +35,52 @@ explore: product_discovery {
   }
 }
 
-# ── 2. Customer segments & LTV ───────────────────────────────────
-explore: customer_analysis {
-  from: vw_customer_ltv
+explore: vw_customer_ltv {
   label: "Customers & LTV"
   description: "Customer profiles enriched with lifetime purchase metrics and eligible promotions."
   persist_with: daily_refresh
 }
 
-# ── 3. Search → purchase funnel ──────────────────────────────────
-explore: search_funnel {
-  from: vw_search_funnel
+explore: vw_search_funnel {
   label: "Search & Browse Funnel"
   description: "Session-level search behaviour with pre-computed conversion and cart abandonment flags."
   persist_with: daily_refresh
 }
 
-# ── 4. Review intelligence ───────────────────────────────────────
-explore: review_intelligence {
-  from: vw_segment_ratings
+explore: vw_segment_ratings {
   label: "Reviews by Segment"
-  description: "Pre-aggregated ratings by product × skin type × skin tone × age group."
+  description: "Pre-aggregated ratings by product x skin type x skin tone x age group."
   persist_with: daily_refresh
 
   join: vw_product_full {
     type: left_outer
-    sql_on: ${review_intelligence.product_id} = ${vw_product_full.product_id} ;;
+    sql_on: ${vw_segment_ratings.product_id} = ${vw_product_full.product_id} ;;
     relationship: many_to_one
     view_label: "Product Details"
   }
 }
 
-# ── 5. Merchandising performance ─────────────────────────────────
-explore: merchandising {
-  from: vw_product_performance
+explore: vw_product_performance {
   label: "Merchandising Performance"
   description: "Brand and product revenue, return rates, repurchase rates, and channel mix."
   persist_with: daily_refresh
 
   join: vw_product_full {
     type: left_outer
-    sql_on: ${merchandising.product_id} = ${vw_product_full.product_id} ;;
+    sql_on: ${vw_product_performance.product_id} = ${vw_product_full.product_id} ;;
     relationship: many_to_one
     view_label: "Product Attributes"
   }
 }
 
-# ── 6. Inclusivity ───────────────────────────────────────────────
-explore: inclusivity {
-  from: vw_inclusivity_scorecard
+explore: vw_inclusivity_scorecard {
   label: "Inclusivity Scorecard"
   description: "Shade range coverage vs satisfaction rating by skin tone per brand."
   persist_with: daily_refresh
 }
 
-# ── 7. Schema & lineage ──────────────────────────────────────────
-explore: schema_impact {
-  from: vw_schema_impact
-  label: "Schema & Lineage"
+explore: vw_schema_impact {
+  label: "Schema and Lineage"
   description: "Column lineage from raw tables through dbt models to dashboards, with analyst query usage."
   persist_with: daily_refresh
 }

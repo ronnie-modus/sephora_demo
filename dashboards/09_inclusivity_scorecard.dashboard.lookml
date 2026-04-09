@@ -8,7 +8,7 @@
     - name: brand_tier
       title: "Brand Tier"
       type: field_filter
-      explore: inclusivity
+      explore: vw_inclusivity_scorecard
       field: vw_inclusivity_scorecard.brand_tier
       ui_config:
         type: button_toggles
@@ -17,7 +17,7 @@
     - name: classification
       title: "Classification"
       type: field_filter
-      explore: inclusivity
+      explore: vw_inclusivity_scorecard
       field: vw_inclusivity_scorecard.inclusivity_classification
       ui_config:
         type: checkboxes
@@ -27,7 +27,7 @@
     - title: "Brands analysed"
       name: brand_count
       model: sephora_demo
-      explore: inclusivity
+      explore: vw_inclusivity_scorecard
       type: single_value
       fields: [vw_inclusivity_scorecard.brand_count]
       listen:
@@ -41,7 +41,7 @@
     - title: "Avg rating gap across tones"
       name: avg_gap
       model: sephora_demo
-      explore: inclusivity
+      explore: vw_inclusivity_scorecard
       type: single_value
       fields: [vw_inclusivity_scorecard.avg_rating_gap]
       listen:
@@ -55,7 +55,7 @@
     - title: "Avg shade range"
       name: avg_shade
       model: sephora_demo
-      explore: inclusivity
+      explore: vw_inclusivity_scorecard
       type: single_value
       fields: [vw_inclusivity_scorecard.avg_rating]
       listen:
@@ -69,7 +69,7 @@
     - title: "Classifications breakdown"
       name: class_breakdown
       model: sephora_demo
-      explore: inclusivity
+      explore: vw_inclusivity_scorecard
       type: looker_pie
       fields: [vw_inclusivity_scorecard.inclusivity_classification,
                vw_inclusivity_scorecard.brand_count]
@@ -85,7 +85,7 @@
     - title: "Brand inclusivity scorecard"
       name: full_scorecard
       model: sephora_demo
-      explore: inclusivity
+      explore: vw_inclusivity_scorecard
       type: table
       fields: [vw_inclusivity_scorecard.brand_name, vw_inclusivity_scorecard.brand_tier,
                vw_inclusivity_scorecard.reviewer_skin_tone, vw_inclusivity_scorecard.avg_shade_range,
@@ -107,7 +107,7 @@
     - title: "Rating by skin tone per brand"
       name: tone_by_brand
       model: sephora_demo
-      explore: inclusivity
+      explore: vw_inclusivity_scorecard
       type: looker_column
       fields: [vw_inclusivity_scorecard.brand_name, vw_inclusivity_scorecard.reviewer_skin_tone,
                vw_inclusivity_scorecard.avg_rating]
@@ -128,7 +128,7 @@
     - title: "Shade range vs rating gap (bubble = review count)"
       name: shade_vs_gap
       model: sephora_demo
-      explore: inclusivity
+      explore: vw_inclusivity_scorecard
       type: looker_scatter
       fields: [vw_inclusivity_scorecard.brand_name, vw_inclusivity_scorecard.avg_shade_range,
                vw_inclusivity_scorecard.avg_rating_gap, vw_inclusivity_scorecard.review_count]

@@ -8,7 +8,7 @@
     - name: department
       title: "Department"
       type: field_filter
-      explore: merchandising
+      explore: vw_product_performance
       field: vw_product_performance.department
       ui_config:
         type: button_toggles
@@ -17,7 +17,7 @@
     - name: brand_tier
       title: "Brand Tier"
       type: field_filter
-      explore: merchandising
+      explore: vw_product_performance
       field: vw_product_performance.brand_tier
       ui_config:
         type: checkboxes
@@ -27,7 +27,7 @@
     - title: "Total gross revenue"
       name: total_gross
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.gross_revenue]
       listen:
@@ -41,7 +41,7 @@
     - title: "Effective revenue (adj. for returns)"
       name: total_effective
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.effective_revenue]
       listen:
@@ -55,7 +55,7 @@
     - title: "Avg return rate"
       name: avg_return
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.avg_return_rate]
       listen:
@@ -69,7 +69,7 @@
     - title: "Avg repurchase rate"
       name: avg_repurchase
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.avg_repurchase_rate]
       listen:
@@ -83,7 +83,7 @@
     - title: "Revenue by department"
       name: rev_by_dept
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: looker_column
       fields: [vw_product_performance.department, vw_product_performance.gross_revenue,
                vw_product_performance.effective_revenue]
@@ -99,7 +99,7 @@
     - title: "Return rate vs repurchase rate by department"
       name: quality_by_dept
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: looker_scatter
       fields: [vw_product_performance.department, vw_product_performance.avg_return_rate,
                vw_product_performance.avg_repurchase_rate, vw_product_performance.gross_revenue]
@@ -113,7 +113,7 @@
     - title: "Top brands — gross vs effective revenue"
       name: brand_revenue
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: looker_bar
       fields: [vw_product_performance.brand_name, vw_product_performance.gross_revenue,
                vw_product_performance.effective_revenue]
@@ -130,7 +130,7 @@
     - title: "Revenue lost to returns by brand"
       name: revenue_loss
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: looker_bar
       fields: [vw_product_performance.brand_name, vw_product_performance.revenue_lost_to_returns]
       sorts: [vw_product_performance.revenue_lost_to_returns desc]
@@ -146,7 +146,7 @@
     - title: "Channel mix by department"
       name: channel_mix
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: looker_column
       fields: [vw_product_performance.department, vw_product_performance.avg_pct_online,
                vw_product_performance.avg_pct_in_store, vw_product_performance.avg_pct_app]
@@ -162,7 +162,7 @@
     - title: "AI recommendation rate by brand"
       name: ai_rec_rate
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: looker_bar
       fields: [vw_product_performance.brand_name, vw_product_performance.avg_recommendation_rate,
                vw_product_performance.avg_repurchase_rate]

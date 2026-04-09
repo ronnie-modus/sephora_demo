@@ -8,7 +8,7 @@
     - name: brand_tier
       title: "Brand Tier"
       type: field_filter
-      explore: merchandising
+      explore: vw_product_performance
       field: vw_product_performance.brand_tier
       ui_config:
         type: button_toggles
@@ -17,7 +17,7 @@
     - name: department
       title: "Department"
       type: field_filter
-      explore: merchandising
+      explore: vw_product_performance
       field: vw_product_performance.department
       ui_config:
         type: dropdown_menu
@@ -27,7 +27,7 @@
     - title: "Brands in selection"
       name: brand_count
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.product_count]
       listen:
@@ -41,7 +41,7 @@
     - title: "Total effective revenue"
       name: total_eff_rev
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.effective_revenue]
       listen:
@@ -55,7 +55,7 @@
     - title: "Avg return rate"
       name: avg_rr
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.avg_return_rate]
       listen:
@@ -69,7 +69,7 @@
     - title: "Avg repurchase rate"
       name: avg_rep
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.avg_repurchase_rate]
       listen:
@@ -83,7 +83,7 @@
     - title: "Full brand scorecard"
       name: brand_table
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: table
       fields: [vw_product_performance.brand_name, vw_product_performance.brand_tier,
                vw_product_performance.department, vw_product_performance.product_count,
@@ -104,7 +104,7 @@
     - title: "Return rate vs repurchase rate (bubble = revenue)"
       name: quality_scatter
       model: sephora_demo
-      explore: merchandising
+      explore: vw_product_performance
       type: looker_scatter
       fields: [vw_product_performance.brand_name, vw_product_performance.avg_return_rate,
                vw_product_performance.avg_repurchase_rate, vw_product_performance.effective_revenue]

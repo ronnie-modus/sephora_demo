@@ -8,7 +8,7 @@
     - name: department
       title: "Department"
       type: field_filter
-      explore: review_intelligence
+      explore: vw_segment_ratings
       field: vw_product_full.department
       ui_config:
         type: button_toggles
@@ -18,7 +18,7 @@
     - name: brand
       title: "Brand"
       type: field_filter
-      explore: review_intelligence
+      explore: vw_segment_ratings
       field: vw_segment_ratings.brand_name
       ui_config:
         type: dropdown_menu
@@ -28,7 +28,7 @@
     - title: "Total reviews in selection"
       name: total_reviews
       model: sephora_demo
-      explore: review_intelligence
+      explore: vw_segment_ratings
       type: single_value
       fields: [vw_segment_ratings.total_reviews]
       listen:
@@ -42,7 +42,7 @@
     - title: "Overall avg rating"
       name: overall_rating
       model: sephora_demo
-      explore: review_intelligence
+      explore: vw_segment_ratings
       type: single_value
       fields: [vw_segment_ratings.avg_rating]
       listen:
@@ -56,7 +56,7 @@
     - title: "Avg recommendation rate"
       name: recommendation_rate
       model: sephora_demo
-      explore: review_intelligence
+      explore: vw_segment_ratings
       type: single_value
       fields: [vw_segment_ratings.avg_recommendation_rate]
       listen:
@@ -70,7 +70,7 @@
     - title: "Avg helpfulness score"
       name: helpfulness
       model: sephora_demo
-      explore: review_intelligence
+      explore: vw_segment_ratings
       type: single_value
       fields: [vw_segment_ratings.avg_helpfulness]
       listen:
@@ -84,7 +84,7 @@
     - title: "Avg rating by skin type"
       name: rating_by_skin_type
       model: sephora_demo
-      explore: review_intelligence
+      explore: vw_segment_ratings
       type: looker_column
       fields: [vw_segment_ratings.reviewer_skin_type, vw_segment_ratings.avg_rating,
                vw_segment_ratings.total_reviews]
@@ -101,7 +101,7 @@
     - title: "Avg rating by skin tone"
       name: rating_by_skin_tone
       model: sephora_demo
-      explore: review_intelligence
+      explore: vw_segment_ratings
       type: looker_column
       fields: [vw_segment_ratings.reviewer_skin_tone, vw_segment_ratings.avg_rating,
                vw_segment_ratings.total_reviews]
@@ -118,7 +118,7 @@
     - title: "Avg rating by age group"
       name: rating_by_age
       model: sephora_demo
-      explore: review_intelligence
+      explore: vw_segment_ratings
       type: looker_column
       fields: [vw_segment_ratings.reviewer_age_group, vw_segment_ratings.avg_rating,
                vw_segment_ratings.total_reviews]
@@ -135,7 +135,7 @@
     - title: "Skin tone × skin type rating heatmap"
       name: tone_type_heatmap
       model: sephora_demo
-      explore: review_intelligence
+      explore: vw_segment_ratings
       type: table
       fields: [vw_segment_ratings.reviewer_skin_type, vw_segment_ratings.reviewer_skin_tone,
                vw_segment_ratings.avg_rating, vw_segment_ratings.total_reviews]
@@ -153,7 +153,7 @@
     - title: "Products with highest skin-type rating variance"
       name: segment_variance
       model: sephora_demo
-      explore: review_intelligence
+      explore: vw_segment_ratings
       type: table
       fields: [vw_segment_ratings.product_name, vw_segment_ratings.brand_name,
                vw_segment_ratings.reviewer_skin_type, vw_segment_ratings.avg_rating,

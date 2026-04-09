@@ -8,7 +8,7 @@
     - name: source_table
       title: "Source Table / Model"
       type: field_filter
-      explore: schema_impact
+      explore: vw_schema_impact
       field: vw_schema_impact.source_table
       ui_config:
         type: advanced
@@ -17,7 +17,7 @@
     - name: source_column
       title: "Source Column"
       type: field_filter
-      explore: schema_impact
+      explore: vw_schema_impact
       field: vw_schema_impact.source_column
       ui_config:
         type: advanced
@@ -26,7 +26,7 @@
     - name: severity
       title: "Impact Severity"
       type: field_filter
-      explore: schema_impact
+      explore: vw_schema_impact
       field: vw_schema_impact.impact_severity
       ui_config:
         type: checkboxes
@@ -36,7 +36,7 @@
     - title: "Affected objects"
       name: affected_objects
       model: sephora_demo
-      explore: schema_impact
+      explore: vw_schema_impact
       type: single_value
       fields: [vw_schema_impact.affected_objects]
       listen:
@@ -51,7 +51,7 @@
     - title: "Critical objects"
       name: critical_objects
       model: sephora_demo
-      explore: schema_impact
+      explore: vw_schema_impact
       type: single_value
       fields: [vw_schema_impact.critical_objects]
       listen:
@@ -65,7 +65,7 @@
     - title: "Lineage edges"
       name: edge_count
       model: sephora_demo
-      explore: schema_impact
+      explore: vw_schema_impact
       type: single_value
       fields: [vw_schema_impact.lineage_edge_count]
       listen:
@@ -80,7 +80,7 @@
     - title: "Analyst queries on source"
       name: analyst_queries
       model: sephora_demo
-      explore: schema_impact
+      explore: vw_schema_impact
       type: single_value
       fields: [vw_schema_impact.analyst_queries_on_source]
       listen:
@@ -94,7 +94,7 @@
     - title: "Full impact trace"
       name: impact_table
       model: sephora_demo
-      explore: schema_impact
+      explore: vw_schema_impact
       type: table
       fields: [vw_schema_impact.source_table, vw_schema_impact.source_column,
                vw_schema_impact.target_table, vw_schema_impact.target_column,
@@ -115,7 +115,7 @@
     - title: "Affected objects by severity"
       name: severity_breakdown
       model: sephora_demo
-      explore: schema_impact
+      explore: vw_schema_impact
       type: looker_pie
       fields: [vw_schema_impact.impact_severity, vw_schema_impact.affected_objects]
       sorts: [vw_schema_impact.affected_objects desc]
@@ -131,7 +131,7 @@
     - title: "Most queried source tables"
       name: most_queried
       model: sephora_demo
-      explore: schema_impact
+      explore: vw_schema_impact
       type: looker_bar
       fields: [vw_schema_impact.source_table, vw_schema_impact.analyst_queries_on_source]
       sorts: [vw_schema_impact.analyst_queries_on_source desc]
@@ -144,7 +144,7 @@
     - title: "Lineage depth — source → target layers"
       name: lineage_by_schema
       model: sephora_demo
-      explore: schema_impact
+      explore: vw_schema_impact
       type: looker_column
       fields: [vw_schema_impact.source_schema, vw_schema_impact.target_schema,
                vw_schema_impact.lineage_edge_count]

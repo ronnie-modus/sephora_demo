@@ -8,7 +8,7 @@
     - name: bi_tier
       title: "Beauty Insider Tier"
       type: field_filter
-      explore: customer_analysis
+      explore: vw_customer_ltv
       field: vw_customer_ltv.beauty_insider_tier
       ui_config:
         type: button_toggles
@@ -17,7 +17,7 @@
     - name: acquisition_source
       title: "Acquisition Source"
       type: field_filter
-      explore: customer_analysis
+      explore: vw_customer_ltv
       field: vw_customer_ltv.acquisition_source
       ui_config:
         type: dropdown_menu
@@ -27,7 +27,7 @@
     - title: "Total customers"
       name: total_customers
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: single_value
       fields: [vw_customer_ltv.customer_count]
       listen:
@@ -41,7 +41,7 @@
     - title: "Avg lifetime spend"
       name: avg_ltv
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: single_value
       fields: [vw_customer_ltv.avg_lifetime_spend]
       listen:
@@ -55,7 +55,7 @@
     - title: "Avg order value"
       name: avg_aov
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: single_value
       fields: [vw_customer_ltv.avg_order_value]
       listen:
@@ -69,7 +69,7 @@
     - title: "Avg repurchase rate"
       name: avg_repurchase
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: single_value
       fields: [vw_customer_ltv.avg_repurchase_rate]
       listen:
@@ -83,7 +83,7 @@
     - title: "% at churn risk (90+ days inactive)"
       name: churn_risk_pct
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: single_value
       fields: [vw_customer_ltv.pct_at_churn_risk]
       listen:
@@ -97,7 +97,7 @@
     - title: "LTV by BI tier"
       name: ltv_by_tier
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: looker_column
       fields: [vw_customer_ltv.beauty_insider_tier, vw_customer_ltv.avg_lifetime_spend,
                vw_customer_ltv.avg_order_value, vw_customer_ltv.avg_repurchase_rate]
@@ -111,7 +111,7 @@
     - title: "Customer count by tier"
       name: count_by_tier
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: looker_pie
       fields: [vw_customer_ltv.beauty_insider_tier, vw_customer_ltv.customer_count]
       sorts: [vw_customer_ltv.customer_count desc]
@@ -124,7 +124,7 @@
     - title: "Churn risk by tier"
       name: churn_by_tier
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: looker_column
       fields: [vw_customer_ltv.beauty_insider_tier, vw_customer_ltv.pct_at_churn_risk,
                vw_customer_ltv.customer_count]
@@ -138,7 +138,7 @@
     - title: "LTV by acquisition source"
       name: ltv_by_acquisition
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: looker_bar
       fields: [vw_customer_ltv.acquisition_source, vw_customer_ltv.avg_lifetime_spend,
                vw_customer_ltv.customer_count]
@@ -152,7 +152,7 @@
     - title: "Skin type distribution by tier"
       name: skin_type_by_tier
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: looker_column
       fields: [vw_customer_ltv.beauty_insider_tier, vw_customer_ltv.skin_type,
                vw_customer_ltv.customer_count]
@@ -167,7 +167,7 @@
     - title: "Signup cohorts by tier"
       name: signup_cohorts
       model: sephora_demo
-      explore: customer_analysis
+      explore: vw_customer_ltv
       type: looker_area
       fields: [vw_customer_ltv.signup_month, vw_customer_ltv.beauty_insider_tier,
                vw_customer_ltv.customer_count]

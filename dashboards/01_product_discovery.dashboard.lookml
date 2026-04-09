@@ -8,7 +8,7 @@
     - name: department
       title: "Department"
       type: field_filter
-      explore: product_discovery
+      explore: vw_product_full
       field: vw_product_full.department
       ui_config:
         type: button_toggles
@@ -18,7 +18,7 @@
     - name: skin_type
       title: "Skin Type"
       type: field_filter
-      explore: product_discovery
+      explore: vw_product_full
       field: vw_segment_ratings.reviewer_skin_type
       ui_config:
         type: dropdown_menu
@@ -27,7 +27,7 @@
     - name: skin_concern
       title: "Skin Concern"
       type: field_filter
-      explore: product_discovery
+      explore: vw_product_full
       field: vw_product_full.skin_concern
       ui_config:
         type: advanced
@@ -36,7 +36,7 @@
     - name: max_price
       title: "Max Price"
       type: field_filter
-      explore: product_discovery
+      explore: vw_product_full
       field: vw_product_full.price
       ui_config:
         type: slider
@@ -47,7 +47,7 @@
     - title: "Products matching profile"
       name: product_match_count
       model: sephora_demo
-      explore: product_discovery
+      explore: vw_product_full
       type: single_value
       fields: [vw_product_full.count]
       listen:
@@ -61,7 +61,7 @@
     - title: "Avg price in selection"
       name: avg_price
       model: sephora_demo
-      explore: product_discovery
+      explore: vw_product_full
       type: single_value
       fields: [vw_product_full.avg_price]
       listen:
@@ -75,7 +75,7 @@
     - title: "Avg segment rating"
       name: avg_segment_rating
       model: sephora_demo
-      explore: product_discovery
+      explore: vw_product_full
       type: single_value
       fields: [vw_segment_ratings.avg_rating]
       listen:
@@ -90,7 +90,7 @@
     - title: "Top rated products for skin type"
       name: top_products_by_segment
       model: sephora_demo
-      explore: product_discovery
+      explore: vw_product_full
       type: table
       fields: [vw_product_full.product_name, vw_product_full.brand_name,
                vw_product_full.price, vw_segment_ratings.avg_rating,
@@ -110,7 +110,7 @@
     - title: "Rating by skin type — top products"
       name: rating_by_skin_type
       model: sephora_demo
-      explore: product_discovery
+      explore: vw_product_full
       type: looker_column
       fields: [vw_product_full.product_name, vw_segment_ratings.reviewer_skin_type,
                vw_segment_ratings.avg_rating]
@@ -128,7 +128,7 @@
     - title: "Products by finish type"
       name: products_by_finish
       model: sephora_demo
-      explore: product_discovery
+      explore: vw_product_full
       type: looker_pie
       fields: [vw_product_full.finish_type, vw_product_full.count]
       sorts: [vw_product_full.count desc]

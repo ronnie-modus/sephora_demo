@@ -8,7 +8,7 @@
     - name: date
       title: "Session Date"
       type: field_filter
-      explore: search_funnel
+      explore: vw_search_funnel
       field: vw_search_funnel.session_date
       ui_config:
         type: relative_timeframes
@@ -18,7 +18,7 @@
     - name: query_intent
       title: "Query Intent"
       type: field_filter
-      explore: search_funnel
+      explore: vw_search_funnel
       field: vw_search_funnel.query_intent
       ui_config:
         type: dropdown_menu
@@ -27,7 +27,7 @@
     - name: device_type
       title: "Device"
       type: field_filter
-      explore: search_funnel
+      explore: vw_search_funnel
       field: vw_search_funnel.device_type
       ui_config:
         type: button_toggles
@@ -37,7 +37,7 @@
     - title: "Total sessions"
       name: total_sessions
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: single_value
       fields: [vw_search_funnel.session_count]
       listen:
@@ -52,7 +52,7 @@
     - title: "Conversion rate"
       name: conversion_rate
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: single_value
       fields: [vw_search_funnel.conversion_rate]
       listen:
@@ -67,7 +67,7 @@
     - title: "Cart add rate"
       name: cart_add_rate
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: single_value
       fields: [vw_search_funnel.cart_add_rate]
       listen:
@@ -82,7 +82,7 @@
     - title: "Cart abandonment rate"
       name: cart_abandon_rate
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: single_value
       fields: [vw_search_funnel.cart_abandon_rate]
       listen:
@@ -97,7 +97,7 @@
     - title: "Avg session duration (min)"
       name: avg_duration
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: single_value
       fields: [vw_search_funnel.avg_duration_min]
       listen:
@@ -112,7 +112,7 @@
     - title: "Conversion rate by query intent"
       name: conv_by_intent
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: looker_bar
       fields: [vw_search_funnel.query_intent, vw_search_funnel.session_count,
                vw_search_funnel.conversion_rate, vw_search_funnel.cart_add_rate]
@@ -129,7 +129,7 @@
     - title: "Sessions by device type"
       name: sessions_by_device
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: looker_pie
       fields: [vw_search_funnel.device_type, vw_search_funnel.session_count]
       sorts: [vw_search_funnel.session_count desc]
@@ -145,7 +145,7 @@
     - title: "Top queries by volume with conversion rate"
       name: top_queries
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: table
       fields: [vw_search_funnel.search_queries, vw_search_funnel.query_intent,
                vw_search_funnel.session_count, vw_search_funnel.conversion_rate,
@@ -164,7 +164,7 @@
     - title: "Conversion trend over time"
       name: conversion_trend
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: looker_line
       fields: [vw_search_funnel.session_week, vw_search_funnel.conversion_rate,
                vw_search_funnel.cart_add_rate, vw_search_funnel.cart_abandon_rate]
@@ -181,7 +181,7 @@
     - title: "Conversion rate by BI tier"
       name: conv_by_tier
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: looker_column
       fields: [vw_search_funnel.beauty_insider_tier, vw_search_funnel.session_count,
                vw_search_funnel.conversion_rate]
@@ -198,7 +198,7 @@
     - title: "Acquisition channel vs conversion"
       name: channel_conv
       model: sephora_demo
-      explore: search_funnel
+      explore: vw_search_funnel
       type: looker_bar
       fields: [vw_search_funnel.acquisition_channel, vw_search_funnel.session_count,
                vw_search_funnel.conversion_rate]
