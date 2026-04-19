@@ -46,7 +46,7 @@
   elements:
     - title: "Products matching profile"
       name: product_match_count
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: single_value
       fields: [vw_product_full.count]
@@ -60,7 +60,7 @@
 
     - title: "Avg price in selection"
       name: avg_price
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: single_value
       fields: [vw_product_full.avg_price]
@@ -74,7 +74,7 @@
 
     - title: "Avg segment rating"
       name: avg_segment_rating
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: single_value
       fields: [vw_segment_ratings.avg_rating]
@@ -89,7 +89,7 @@
 
     - title: "Top rated products for skin type"
       name: top_products_by_segment
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: table
       fields: [vw_product_full.product_name, vw_product_full.brand_name,
@@ -109,7 +109,7 @@
 
     - title: "Rating by skin type — top products"
       name: rating_by_skin_type
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: looker_column
       fields: [vw_product_full.product_name, vw_segment_ratings.reviewer_skin_type,
@@ -127,7 +127,7 @@
 
     - title: "Products by finish type"
       name: products_by_finish
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: looker_pie
       fields: [vw_product_full.finish_type, vw_product_full.count]

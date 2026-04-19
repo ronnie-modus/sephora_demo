@@ -26,7 +26,7 @@
   elements:
     - title: "Brands in selection"
       name: brand_count
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.product_count]
@@ -40,7 +40,7 @@
 
     - title: "Total effective revenue"
       name: total_eff_rev
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.effective_revenue]
@@ -54,7 +54,7 @@
 
     - title: "Avg return rate"
       name: avg_rr
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.avg_return_rate]
@@ -68,7 +68,7 @@
 
     - title: "Avg repurchase rate"
       name: avg_rep
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: single_value
       fields: [vw_product_performance.avg_repurchase_rate]
@@ -82,7 +82,7 @@
 
     - title: "Full brand scorecard"
       name: brand_table
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: table
       fields: [vw_product_performance.brand_name, vw_product_performance.brand_tier,
@@ -103,7 +103,7 @@
 
     - title: "Return rate vs repurchase rate (bubble = revenue)"
       name: quality_scatter
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: looker_scatter
       fields: [vw_product_performance.brand_name, vw_product_performance.avg_return_rate,

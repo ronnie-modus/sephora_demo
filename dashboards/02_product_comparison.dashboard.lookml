@@ -26,7 +26,7 @@
   elements:
     - title: "Return rate comparison"
       name: return_rate_comparison
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: looker_column
       fields: [vw_product_full.product_name, vw_product_performance.avg_return_rate]
@@ -42,7 +42,7 @@
 
     - title: "Repurchase rate comparison"
       name: repurchase_rate_comparison
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: looker_column
       fields: [vw_product_full.product_name, vw_product_performance.avg_repurchase_rate]
@@ -58,7 +58,7 @@
 
     - title: "Gross vs effective revenue"
       name: revenue_comparison
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: looker_column
       fields: [vw_product_full.product_name, vw_product_performance.gross_revenue,
@@ -75,7 +75,7 @@
 
     - title: "Rating by skin tone"
       name: rating_by_tone
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: looker_column
       fields: [vw_product_full.product_name, vw_segment_ratings.reviewer_skin_tone,
@@ -93,7 +93,7 @@
 
     - title: "Rating by skin type"
       name: rating_by_type
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: looker_column
       fields: [vw_product_full.product_name, vw_segment_ratings.reviewer_skin_type,
@@ -111,7 +111,7 @@
 
     - title: "Full performance table"
       name: full_comparison_table
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: table
       fields: [vw_product_full.product_name, vw_product_full.brand_name,
@@ -131,7 +131,7 @@
 
     - title: "Customers also bought"
       name: copurchase
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_full
       type: table
       fields: [vw_product_full.product_name, vw_copurchase_enriched.product_b_name,

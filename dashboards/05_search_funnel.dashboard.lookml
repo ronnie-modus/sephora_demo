@@ -36,7 +36,7 @@
   elements:
     - title: "Total sessions"
       name: total_sessions
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: single_value
       fields: [vw_search_funnel.session_count]
@@ -51,7 +51,7 @@
 
     - title: "Conversion rate"
       name: conversion_rate
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: single_value
       fields: [vw_search_funnel.conversion_rate]
@@ -66,7 +66,7 @@
 
     - title: "Cart add rate"
       name: cart_add_rate
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: single_value
       fields: [vw_search_funnel.cart_add_rate]
@@ -81,7 +81,7 @@
 
     - title: "Cart abandonment rate"
       name: cart_abandon_rate
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: single_value
       fields: [vw_search_funnel.cart_abandon_rate]
@@ -96,7 +96,7 @@
 
     - title: "Avg session duration (min)"
       name: avg_duration
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: single_value
       fields: [vw_search_funnel.avg_duration_min]
@@ -111,7 +111,7 @@
 
     - title: "Conversion rate by query intent"
       name: conv_by_intent
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: looker_bar
       fields: [vw_search_funnel.query_intent, vw_search_funnel.session_count,
@@ -128,7 +128,7 @@
 
     - title: "Sessions by device type"
       name: sessions_by_device
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: looker_pie
       fields: [vw_search_funnel.device_type, vw_search_funnel.session_count]
@@ -144,7 +144,7 @@
 
     - title: "Top queries by volume with conversion rate"
       name: top_queries
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: table
       fields: [vw_search_funnel.search_queries, vw_search_funnel.query_intent,
@@ -163,7 +163,7 @@
 
     - title: "Conversion trend over time"
       name: conversion_trend
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: looker_line
       fields: [vw_search_funnel.session_week, vw_search_funnel.conversion_rate,
@@ -180,7 +180,7 @@
 
     - title: "Conversion rate by BI tier"
       name: conv_by_tier
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: looker_column
       fields: [vw_search_funnel.beauty_insider_tier, vw_search_funnel.session_count,
@@ -197,7 +197,7 @@
 
     - title: "Acquisition channel vs conversion"
       name: channel_conv
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_search_funnel
       type: looker_bar
       fields: [vw_search_funnel.acquisition_channel, vw_search_funnel.session_count,

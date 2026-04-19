@@ -35,7 +35,7 @@
   elements:
     - title: "Affected objects"
       name: affected_objects
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_schema_impact
       type: single_value
       fields: [vw_schema_impact.affected_objects]
@@ -50,7 +50,7 @@
 
     - title: "Critical objects"
       name: critical_objects
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_schema_impact
       type: single_value
       fields: [vw_schema_impact.critical_objects]
@@ -64,7 +64,7 @@
 
     - title: "Lineage edges"
       name: edge_count
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_schema_impact
       type: single_value
       fields: [vw_schema_impact.lineage_edge_count]
@@ -79,7 +79,7 @@
 
     - title: "Analyst queries on source"
       name: analyst_queries
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_schema_impact
       type: single_value
       fields: [vw_schema_impact.analyst_queries_on_source]
@@ -93,7 +93,7 @@
 
     - title: "Full impact trace"
       name: impact_table
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_schema_impact
       type: table
       fields: [vw_schema_impact.source_table, vw_schema_impact.source_column,
@@ -114,7 +114,7 @@
 
     - title: "Affected objects by severity"
       name: severity_breakdown
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_schema_impact
       type: looker_pie
       fields: [vw_schema_impact.impact_severity, vw_schema_impact.affected_objects]
@@ -130,7 +130,7 @@
 
     - title: "Most queried source tables"
       name: most_queried
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_schema_impact
       type: looker_bar
       fields: [vw_schema_impact.source_table, vw_schema_impact.analyst_queries_on_source]
@@ -143,7 +143,7 @@
 
     - title: "Lineage depth — source → target layers"
       name: lineage_by_schema
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_schema_impact
       type: looker_column
       fields: [vw_schema_impact.source_schema, vw_schema_impact.target_schema,

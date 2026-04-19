@@ -26,7 +26,7 @@
   elements:
     - title: "Gross revenue by month"
       name: monthly_revenue
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: looker_line
       fields: [vw_product_full.department, vw_product_performance.gross_revenue]
@@ -42,7 +42,7 @@
 
     - title: "Total purchases by month and department"
       name: monthly_purchases
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: looker_area
       fields: [vw_product_full.department, vw_product_performance.total_purchases]
@@ -58,7 +58,7 @@
 
     - title: "Revenue mix by department"
       name: dept_mix
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: looker_pie
       fields: [vw_product_performance.department, vw_product_performance.gross_revenue]
@@ -73,7 +73,7 @@
 
     - title: "Return rate trend by department"
       name: return_trend
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: looker_line
       fields: [vw_product_full.department, vw_product_performance.avg_return_rate]
@@ -92,7 +92,7 @@
 
     - title: "Repurchase rate trend by department"
       name: repurchase_trend
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: looker_line
       fields: [vw_product_full.department, vw_product_performance.avg_repurchase_rate]
@@ -108,7 +108,7 @@
 
     - title: "Revenue by brand tier over time"
       name: tier_revenue_trend
-      model: sephora_demo
+      model: ecommerce_demo
       explore: vw_product_performance
       type: looker_column
       fields: [vw_product_performance.brand_tier, vw_product_performance.gross_revenue]
